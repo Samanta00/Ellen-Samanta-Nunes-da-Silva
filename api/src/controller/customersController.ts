@@ -99,7 +99,7 @@ export const updatePeopleById = async (req: Request, res: Response) => {
         console.log('APÓS ATUALIZAÇÃO', savedPeople)
 
         res.status(200).json({
-            message: "Nota atualizada com sucesso!!!!",
+            message: "Usuário atualizado com sucesso!!!!",
             savedPeople
         })
 
