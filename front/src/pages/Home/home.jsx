@@ -1,14 +1,10 @@
-import React, { Fragment, useEffect, useState } from 'react';
-// import Api from '../services/apiRandom';
+import React, { useState } from 'react';
 import axios from 'axios'
-
+import ButtonsNavegation from '../buttonsNavegation/buttonNavegation';
 
 function PagesHome(props) {
   const [userData, setUserData] = useState([]);
   const [loading, setLoagind] = useState(false);
-
-
-
   const onTeste = () => {
     setLoagind(true)
     axios.get('https://randomuser.me/api/')
@@ -20,11 +16,10 @@ function PagesHome(props) {
       ]).finally(() => {
         setLoagind(false);
       })
-
   }
   return (
     <div className="pages-home">
-      Parabéns, você conseguiu, aperte no botão para pesquisar uma pessoa novamente
+     <h1> Parabéns, você conseguiu. aperte no botão para pesquisar uma pessoa, caso queira ver outra pessoa, apenas só click novamente. </h1>
       <br />
       <h1>Lista de Pessoas</h1>
       <button type="button" onClick={onTeste}>Buscar</button>
@@ -32,10 +27,10 @@ function PagesHome(props) {
         <h1>Loading</h1>
       ) : (
         <div className='app_user'>
-          {userData.map((user, index) => {
+          {userData.map((user) => {
             return (
               <div key={user.id}>
-                <img src={user.picture.large} />
+                <img src={user.picture.large} alt="Peoples"/>
                 <table>
                   <thead >
                     <tr>
@@ -54,6 +49,7 @@ function PagesHome(props) {
                     </tr>
                   </tbody>
                 </table>
+              <ButtonsNavegation rota1="/" rota2='/pageshttp'/>
               </div>
             )
           })}
@@ -63,9 +59,5 @@ function PagesHome(props) {
   )
 
 };
-
-
-
-
 
 export default PagesHome;

@@ -7,7 +7,6 @@ import { Navigate, Route, Outlet } from 'react-router-dom';
 //Verifica se existe há autenticação, se não existir irá voltar para a página inicial
 const AuthLayout = () => {
     const { token } = useContext(StoreContext);
-
     return token ? <Outlet /> : <Navigate to={"/"} replace />;
 };
 

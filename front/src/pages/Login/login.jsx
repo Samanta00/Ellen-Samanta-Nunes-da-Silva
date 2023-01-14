@@ -1,51 +1,40 @@
 import React, { useState, useContext } from 'react';
 import StoreContext from '../../Store/context';
 import { useNavigate } from 'react-router-dom';
-
 // import RoutesPrivate from '../../routers/private/private';
-
 import './login.css';
 import api from '../Cadastro/apiCadastros';
 
-
-
 const UserLogin = () => {
   const [values, setValues] = useState({
-    nome: "ellen",
-    senha: "123"
+    nome: "desafiosharenergy",
+    senha: "sh@r3n3rgy"
   });
-
 
   const [error, setError] = useState(null);
   const { setToken } = useContext(StoreContext);
-
-
+  
   const navigate = useNavigate()
   function onChange(event) {
     const { value, name } = event.target;
-
     setValues({
       ...values,
       [name]: value
     });
   }
 
-
   function CheckBox(e) {
     console.log('eii')
     console.log(e)
   }
 
-
   function onSubmit(event) {
     event.preventDefault();
-    console.log(event)
     api.post("/auth/login", values)
       .then(response => response.data)
 
       .then(data => {
         setToken(data.token)
-        console.log(data)
         navigate('/home')
 
       })
