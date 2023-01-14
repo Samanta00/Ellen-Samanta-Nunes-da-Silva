@@ -1,4 +1,14 @@
+# Projeto guiado para vaga de desenvolvimento Back-end
 
+### autor(a): 'Ellen Samanta Nunes da Silva'
+
+## Afim de divulgar uma demonstração sobre os conhecimentos adquiridos em Back-end foi feito um Projeto Implementado com React, Node, Jest, Typescript, MongoDB, javascript, Html e css.
+
+## Para adquirir o uso do projeto você pode seguir as instruções que serão passadas:
+
+### 1° Entre no repositório pelo link https://github.com/Samanta00/Ellen-Samanta-Nunes-da-Silva
+
+### 2°
 
 
 # Getting Started with Create React App
