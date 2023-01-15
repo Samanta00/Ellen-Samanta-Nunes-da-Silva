@@ -1,6 +1,7 @@
 # Projeto guiado para vaga de desenvolvimento Back-end
 
 ### autor(a): 'Ellen Samanta Nunes da Silva'
+### Vídeo explicativo sobre o projeto encontrado em : https://www.youtube.com/watch?v=_VuXWYnqtT8&feature=youtu.be
 
 ## Afim de divulgar uma demonstração sobre os conhecimentos adquiridos em Back-end foi feito um Projeto Implementado com React, Node, Jest, Typescript, MongoDB, javascript, Html e css.
 
@@ -11,8 +12,20 @@
 ### 2° Copie o código passado de acordo com a imagem
 <img src='src/assets/img/imageReadMe.jpeg'>
 
+### 3° Em seu terminal digite git clone https://github.com/Samanta00/Ellen-Samanta-Nunes-da-Silva.git
 
+### 4° após ter todo o código clonado digite npm install para pode instalar todas as dependência e configurações necessárias para o projeto rodar
+
+### 5° para rodar o front-end será necessário ir na pasta do projeto chamada front, após isso abrir o terminal e dar um npm start
 # Getting Started with Create React App
+
+## Arquitetura do Projeto em Front-end
+<img src='src/assets/img/estruturaProjeto.jpeg'>
+
+
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
