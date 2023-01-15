@@ -11,6 +11,12 @@
 
 ### 2° Copie o código passado de acordo com a imagem
 <img src='src/assets/img/imageReadMe.jpeg'>
+### 3° Em seu terminal digite git clone https://github.com/Samanta00/Ellen-Samanta-Nunes-da-Silva.git
+
+### 4° após ter todo o código clonado digite npm install para pode instalar todas as dependência e configurações necessárias para o projeto rodar
+
+### 5° para rodar o front-end será necessário ir na pasta do projeto do front-end e dar um npm start
+
 
 ### 3° Em seu terminal digite git clone https://github.com/Samanta00/Ellen-Samanta-Nunes-da-Silva.git
 
