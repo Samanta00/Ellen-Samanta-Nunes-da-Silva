@@ -8,7 +8,8 @@
 
 ### 1° Entre no repositório pelo link https://github.com/Samanta00/Ellen-Samanta-Nunes-da-Silva
 
-### 2°
+### 2° Copie o código passado de acordo com a imagem
+<img src='src/assets/img/imageReadMe.jpeg'>
 
 
 # Getting Started with Create React App

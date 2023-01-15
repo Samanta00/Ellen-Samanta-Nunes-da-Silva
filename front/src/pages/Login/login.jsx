@@ -11,9 +11,9 @@ const UserLogin = () => {
     senha: "sh@r3n3rgy"
   });
 
-  const [error, setError] = useState(null);
+  const [error] = useState(null);
   const { setToken } = useContext(StoreContext);
-  
+
   const navigate = useNavigate()
   function onChange(event) {
     const { value, name } = event.target;
@@ -23,10 +23,18 @@ const UserLogin = () => {
     });
   }
 
-  function CheckBox(e) {
-    console.log('eii')
-    console.log(e)
+  function checkBox(armazenamento, loginUser) {
+    localStorage.setItem('armazenamento', loginUser)
+
+    // useEffect(() => {
+    //   const loggedInUser = localStorage.getItem("armazenamento");
+    //   if (loggedInUser) {
+    //     const foundUser = JSON.parse(loggedInUser);
+    //     setUser(foundUser);
+    //   }
+    // }, []);
   }
+
 
   function onSubmit(event) {
     event.preventDefault();
@@ -36,11 +44,23 @@ const UserLogin = () => {
       .then(data => {
         setToken(data.token)
         navigate('/home')
+        const checkbox = document.getElementById('checkBox')
+
+        const user={
+          values:values,
+          token:data.token
+        }
+
+        if (checkbox.checked) {
+          checkBox('ls_armazenamento', user )
+        }
 
       })
       .catch(error => {
         console.error(error)
       })
+
+
   }
 
   return (
@@ -72,7 +92,7 @@ const UserLogin = () => {
         {error && (
           <div className="user-login__error">{error}</div>
         )}
-        <input type="checkbox" name='checkbox' onClick={CheckBox} />
+        <input type="checkbox" id="checkBox" name='checkbox' />
         <label htmlFor="senha">relembra senha e nome</label>
         <br /><br />
         <input type={"button"} value={"enviar"} onClick={onSubmit} />
